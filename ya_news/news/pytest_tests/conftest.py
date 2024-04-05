@@ -5,7 +5,6 @@ from django.conf import settings
 from django.utils import timezone
 from datetime import datetime, timedelta
 
-
 from news.models import News, Comment
 
 
@@ -53,8 +52,8 @@ def comment(author, news):
 
 
 @pytest.fixture
-def pk_comment(comment):
-    return (comment.pk,)
+def id_for_news(news):
+    return (news.id,)
 
 
 @pytest.fixture
